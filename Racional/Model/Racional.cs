@@ -40,7 +40,7 @@ namespace Racionales.Model
         this.denominador = denominador;
     }
 
-/*Hacemos las funciones de multiplicar y sumar*/
+/*Hacemos las funciones de multiplicar, dividir, sumar y restar*/
 
    public Racional multiplicar(Racional r)
     {
@@ -59,6 +59,26 @@ namespace Racionales.Model
 
         return new Racional(numerador, denominador );
     }
+
+   public Racional sumar(Racional r)
+   {
+       int numerador = this.numerador * r.getDenominador() + this.denominador * r.getNumerador();
+       int denominador = this.denominador * r.getDenominador();
+
+
+       return new Racional(numerador, denominador);
+   }
+
+   public Racional restar(Racional r)
+   {
+       int numerador = this.numerador * r.getDenominador() - this.denominador * r.getNumerador();
+       int denominador = this.denominador * r.getDenominador();
+
+       return new Racional(numerador, denominador);
+   }
+
+
+
  }
       
 }

@@ -32,7 +32,7 @@ namespace Racionales
             
 
             textBox9.Text = producto.getNumerador().ToString();
-            textBox8.Text = producto.getDenominador().ToString();
+            textBox8.Text = producto.getDenominador().ToString(); 
         }
 
         private void button2_Click(object sender, EventArgs e)
